@@ -1,4 +1,4 @@
-# Riding-Cities
+# Site-Booki
 Projet 3 de la formation OpenClassrooms "Intégrateur Web"
 
 Mission : Créer la page d'accueil d'une agence de voyage à partir de maquettes Figma fournies (mobile, tablette et desktop), en utilisant uniquement HTML et CSS.
