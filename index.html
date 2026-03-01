@@ -8,7 +8,7 @@
       name="description"
       content="Booki - Trouvez votre hébergement pour des vacances de rêve"
     />
-    <title>Booki</title>
+    <title>Booki - Thierry-dev</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,6 +27,7 @@
 
   <body>
     <div class="main-container">
+      <!-- Développement du bloc "Header" de la maquette Figma -->
       <header>
         <a href="#">
           <img src="./images/logo/Booki.png" alt="Booki" />
@@ -39,8 +40,72 @@
         </nav>
       </header>
       <main>
+        <!-- Section formulaire de recherche -->
+        <section class="recherche-localite">
+          <h1 class="section-title">
+            Trouvez votre hébergement pour des vacances de rêve
+          </h1>
+          <p class="recherche-sous-titre">
+            En plein centre-ville ou en pleine nature
+          </p>
+          <form action="#" class="formulaire-recherche">
+            <div class="formulaire-icone">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            </div>
+            <input
+              id="select-ville"
+              type="text"
+              name="ville"
+              placeholder="Marseille, France"
+              class="formulaire-input"
+            />
+            <button type="submit" class="formulaire-bouton">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+              <span class="formulaire-bouton-texte">Rechercher</span>
+            </button>
+          </form>
+        </section>
+
+        <!-- Section filtres thématiques -->
+        <section class="filtres-thematique">
+          <div class="filtres">
+            <p class="filtres-label">Filtres</p>
+            <ul class="filtres-liste">
+              <li>
+                <button class="filtre-bouton">
+                  <i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i>
+                  Économique
+                </button>
+              </li>
+              <li>
+                <button class="filtre-bouton">
+                  <i class="fa-solid fa-person" aria-hidden="true"></i>
+                  Familial
+                </button>
+              </li>
+              <li>
+                <button class="filtre-bouton">
+                  <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                  Romantique
+                </button>
+              </li>
+              <li>
+                <button class="filtre-bouton">
+                  <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                  Nos pépites
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="info-resultats">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+          </div>
+        </section>
+
+        <!-- Section de la maquette Figma "Section group" -->
         <div class="hebergements-and-populaires">
-          <section class="hebergements"></section>
+          <section id="hebergements" class="hebergements"></section>
           <section class="populaires">
             <div class="populaires-title">
               <h2 class="section-title">Les plus populaires</h2>
