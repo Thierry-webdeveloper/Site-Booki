@@ -112,7 +112,7 @@ nav ul li a:hover {
 .formulaire-recherche {
     display: flex;
     margin-top: 30px;
-    width: 377px;           /* 385 */
+    width: 377px;
     max-width: 100%;
     height: 49px;
 }
