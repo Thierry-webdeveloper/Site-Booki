@@ -193,15 +193,15 @@ nav ul li a:hover {
     font-weight: 700;
 }
 
-.filtre-bouton .fa-solid {
-    color: var(--main-color);
-    background-color: var(--filter-bg-color);
-    border-radius: 50%;
-    padding: 10px;
-}
-
 .filtre-bouton:hover {
     background-color: var(--filter-bg-color);
+}
+
+.filtre-bouton .fa-solid {
+    color: var(--main-color);
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 /****** Info Résultats ***********/
@@ -235,12 +235,25 @@ nav ul li a:hover {
 }
 
 .hebergements-cards {
-    width: 248px;                   /* test carte unique dans format final */
+    /* width: 248px; */                   /* test carte unique dans format final */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 33px;
+}
+
+/* .hebergements-cards .card {
+    width: 100%;
+} */
+
+.hebergements-cards a {
+    width: calc(33.33% - 20px);
+    /* 30px de gap × 2 espaces = 60px à répartir sur 3 cartes environ 20px chacune */
 }
 
 .hebergements-cards img {           /* étape 6 de la lettre de mission */
     width: 100%;
-    height: 124px;
+    height: 110px;                  /* hauteur Figma = 124px (93%) */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     object-fit: cover;
@@ -251,17 +264,23 @@ nav ul li a:hover {
     padding-left: 15px;
 }
 
-.hebergements-cards .card-title {
+.hebergements-cards .card-title {       /* copie de .populaires-cards .card-title */
     margin-top: 10px;
     margin-bottom: 4px;
 }
 
-.hebergements-cards .card-subtitle {
+.hebergements-cards .card-subtitle {    /* .populaires-cards .card-subtitle */
     margin: 0;
 }
 
 .hebergements-cards .card-rating {
     margin-bottom: 15px;
+}
+
+.afficher-plus {
+    font-weight: 700;
+    margin-top: 21px;
+    display: block;      /* pour que le margin-top fonctionne */
 }
 
 /****** Populaires ***********/
@@ -277,13 +296,13 @@ nav ul li a:hover {
 
 .populaires-cards .card {
     display: flex;
-    flex-direction: row;            /* horizontal par défaut */
+    flex-direction: row;                /* horizontal par défaut */
     margin-top: 33px;
 }
 
 .populaires-cards img {
     width: 33%;
-    height: 136px;
+    height: 136px;                      /* hauteur Figma 146px (93%) */
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
