@@ -289,7 +289,7 @@ nav ul li a:hover {
 }
 
 .populaires-title {
-    display: flex;
+    display: flex;                      /* horizontal par défaut */
     justify-content: space-between;
     align-items: center;
 }
@@ -329,6 +329,40 @@ nav ul li a:hover {
     margin-bottom: 5px;
 }
 
+/****** Activités ***********/
+.activites {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 35px;
+    padding: 30px;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+.activites-cards {
+    display: flex;
+    flex-direction: row;            /* valeur par défaut si non précisé */
+    gap: 30px;
+}
+
+.activites-cards a {
+    width: calc(25% - 23px);
+    /* 30px de gap × 3 espaces = 90px à répartir sur 4 cartes environ 23px chacune */
+}
+
+.activites-cards img {
+    width: 100%;
+    /* width: 298px; */                   /* largeur Figma = 297.5px - test 1 carte */
+    height: 380px;                  /* hauteur Figma = 380px */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.activites-cards .card-title {
+    margin: 20px 19px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
