@@ -43,7 +43,6 @@ a {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));   /* ombre portée 0px horizontalement à gauche / 3px verticalement en bas */
-    /* filter: drop-shadow(10px 3px 15px rgba(248, 2, 2, 0.5)); */
 }
 
 .card img {
@@ -142,7 +141,6 @@ nav ul li a:hover {
     outline: none;
 }
 
-
 .formulaire-bouton {
     display: flex;
     align-items: center;
@@ -235,16 +233,12 @@ nav ul li a:hover {
 }
 
 .hebergements-cards {
-    /* width: 248px; */                   /* test carte unique dans format final */
+    /* width: 100%; */                    /*  div, élément block prend naturellement 100% de la largeur de son parent */
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 33px;
 }
-
-/* .hebergements-cards .card {
-    width: 100%;
-} */
 
 .hebergements-cards a {
     width: calc(33.33% - 20px);
@@ -252,7 +246,7 @@ nav ul li a:hover {
 }
 
 .hebergements-cards img {           /* étape 6 de la lettre de mission */
-    width: 100%;
+    width: 100%;                    /* img, élément inline -> forcer la largeur */
     height: 110px;                  /* hauteur Figma = 124px (93%) */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -362,6 +356,37 @@ nav ul li a:hover {
 
 .activites-cards .card-title {
     margin: 20px 19px;
+}
+
+/****** Footer ***********/
+footer {
+    display: flex;                          /* horizontal par défaut entre les 3 colonnes */
+    background-color: var(--main-bg-color);
+    padding: 20px;
+    margin-top: 35px;
+}
+
+.footer-colonne {
+    display: flex;
+    flex-direction: column;                 /* vertical dans chaque colonne */
+    width: 33.33%;
+    gap: 15px;
+}
+
+.footer-titre {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.footer-colonne ul {
+    list-style: none;
+    padding-left: 0;                        /* Point de vigilance de la lettre de mission */
+    margin: 0;
+}
+
+.footer-colonne ul li {
+    margin-bottom: 10px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
