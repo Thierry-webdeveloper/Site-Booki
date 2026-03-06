@@ -237,7 +237,7 @@ nav ul li a:hover {
 }
 
 .hebergements-cards {
-    /* width: 100%; */                    /*  div, élément block prend naturellement 100% de la largeur de son parent */
+    /* width: 100%; */              /*  div, élément block prend naturellement 100% de la largeur de son parent */
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -294,7 +294,6 @@ nav ul li a:hover {
 
 .populaires-cards .card {
     display: flex;                      /* horizontal par défaut */
-    
     margin-top: 33px;
 }
 
