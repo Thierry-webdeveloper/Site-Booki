@@ -202,6 +202,10 @@ nav ul li a:hover {
     padding: 10px;
 }
 
+.filtre-bouton:hover .fa-solid {
+    background-color: var(--filter-bg-color);   /* couleur fond icône = couleur fond texte */
+}
+
 /****** Info Résultats ***********/
 .info-resultats {
     display: flex;
@@ -248,9 +252,9 @@ nav ul li a:hover {
 .hebergements-cards img {           /* étape 6 de la lettre de mission */
     width: 100%;                    /* img, élément inline -> forcer la largeur */
     height: 110px;                  /* hauteur Figma = 124px (93%) */
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    object-fit: cover;
+    border-top-left-radius: 16px;   /* radius diminué pour l'esthétique */
+    border-top-right-radius: 16px;
+    /* object-fit: cover; */              /* propriété déjà fixée dans .cards img */
 }
 
 .hebergements-cards .card-content {
@@ -289,16 +293,16 @@ nav ul li a:hover {
 }
 
 .populaires-cards .card {
-    display: flex;
-    flex-direction: row;                /* horizontal par défaut */
+    display: flex;                      /* horizontal par défaut */
+    
     margin-top: 33px;
 }
 
 .populaires-cards img {
     width: 33%;
     height: 136px;                      /* hauteur Figma 146px (93%) */
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
 }
 
 .populaires-cards .card-content {
@@ -335,8 +339,7 @@ nav ul li a:hover {
 }
 
 .activites-cards {
-    display: flex;
-    flex-direction: row;            /* valeur par défaut si non précisé */
+    display: flex;                  /* row (horizontal) par défaut */
     gap: 30px;
 }
 
@@ -345,13 +348,16 @@ nav ul li a:hover {
     /* 30px de gap × 3 espaces = 90px à répartir sur 4 cartes environ 23px chacune */
 }
 
+.activites-cards .card {
+    padding: 0px;                   /* supprime le padding 5px de .card */
+}
+
 .activites-cards img {
     width: 100%;
-    /* width: 298px; */                   /* largeur Figma = 297.5px - test 1 carte */
     height: 380px;                  /* hauteur Figma = 380px */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    object-fit: cover;
+    /* object-fit: cover; */              /* propriété déjà fixée dans .card img */
 }
 
 .activites-cards .card-title {
@@ -360,7 +366,7 @@ nav ul li a:hover {
 
 /****** Footer ***********/
 footer {
-    display: flex;                          /* horizontal par défaut entre les 3 colonnes */
+    display: flex;                  /* horizontal par défaut entre les 3 colonnes */
     background-color: var(--main-bg-color);
     padding: 20px;
     margin-top: 35px;
@@ -368,7 +374,7 @@ footer {
 
 .footer-colonne {
     display: flex;
-    flex-direction: column;                 /* vertical dans chaque colonne */
+    flex-direction: column;         /* vertical dans chaque colonne */
     width: 33.33%;
     gap: 15px;
 }
@@ -381,7 +387,7 @@ footer {
 
 .footer-colonne ul {
     list-style: none;
-    padding-left: 0;                        /* Point de vigilance de la lettre de mission */
+    padding-left: 0;                /* Point de vigilance de la lettre de mission */
     margin: 0;
 }
 
