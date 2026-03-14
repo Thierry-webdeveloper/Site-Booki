@@ -489,6 +489,10 @@ footer {
         height: 115px;
     }
 
+    header a img {
+        margin: 30px;
+    }
+
     nav {
         width: 100%;
     }
